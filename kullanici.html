@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap - Etkinlikindir.com</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#F0F0F5] font-sans flex flex-col min-h-screen text-gray-800">
+
+    <header class="bg-[#ceb062] shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex-shrink-0">
+                <img src="Resimler/2.png" alt="Logo" class="h-20 w-auto object-contain drop-shadow-lg" onerror="this.src='https://via.placeholder.com/150?text=Logo'">
+            </a>
+            <div class="flex items-center gap-6">
+                <a href="index.html" class="text-white hover:text-yellow-200 font-bold text-lg transition-colors">Ana Sayfa</a>
+                <a href="sepet.html" class="text-white hover:text-yellow-200 font-bold text-lg transition-colors">🛒 Sepet</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto py-12 px-4 flex justify-center items-center">
+        
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row max-w-4xl w-full">
+            
+            <div class="w-full md:w-1/2 p-10 flex flex-col justify-center">
+                <h2 class="text-3xl font-extrabold text-[#ceb062] mb-8">Kullanıcı Girişi</h2>
+                
+                <form name="kullanici">
+                    <div class="mb-5">
+                        <label class="block text-gray-700 text-sm font-bold mb-2">E-posta / Kullanıcı Adı</label>
+                        <input type="text" id="isim2" name="posta" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#ceb062] focus:ring-1 focus:ring-[#ceb062] bg-gray-50" placeholder="E-postanızı girin">
+                    </div>
+                    
+                    <div class="mb-5">
+                        <label class="block text-gray-700 text-sm font-bold mb-2">Şifre</label>
+                        <input type="password" id="sifre2" name="sifre" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#ceb062] focus:ring-1 focus:ring-[#ceb062] bg-gray-50" placeholder="••••••••">
+                    </div>
+                    
+                    <div class="flex items-center justify-between mb-8">
+                        <a href="#" class="text-sm text-blue-600 hover:text-blue-800 font-semibold transition-colors">Şifremi Unuttum</a>
+                    </div>
+                    
+                    <button type="button" onclick="giris()" class="w-full bg-[#ceb062] text-white font-bold text-lg py-3 rounded-lg hover:bg-yellow-600 transition-colors shadow-md">
+                        Giriş Yap
+                    </button>
+                    
+                    <div class="mt-6 text-center">
+                        <p class="text-gray-600">Üye olmadınız mı? <a href="uyeol.html" class="text-[#ceb062] font-bold hover:underline">Hemen üye ol</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="hidden md:block w-full md:w-1/2 bg-[#fff0cc] p-8 flex items-center justify-center">
+                <img src="Resimler/11.png" alt="Giriş Görseli" class="w-full h-auto object-contain" onerror="this.src='https://via.placeholder.com/400?text=Gorsel+Yok'">
+            </div>
+            
+        </div>
+    </main>
+
+    <footer class="bg-white py-6 mt-auto border-t text-center shadow-inner">
+        <p class="text-gray-500 font-medium">© 2026 Etkinlikindir.com</p>
+    </footer>
+
+    <script type="text/javascript" src="kullanici.js"></script>
+</body>
+</html>
