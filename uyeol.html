@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Ol - Etkinlikindir.com</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#F0F0F5] font-sans flex flex-col min-h-screen text-gray-800">
+
+    <header class="bg-[#ceb062] shadow-md z-10 relative">
+        <div class="container mx-auto px-4 py-4 grid grid-cols-1 md:grid-cols-3 items-center gap-4">
+            
+            <div class="hidden md:block"></div>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-2 w-full">
+                <select class="bg-[#fff0cc] text-black px-4 py-3 rounded-md outline-none focus:ring-2 focus:ring-yellow-600 w-full sm:w-48 cursor-pointer font-medium shadow-sm">
+                    <option value="none">Tüm Kategoriler</option>
+                    <option value="sanat">Sanat Atölyesi</option>
+                    <option value="matematik">Matematik Çalışmaları</option>
+                    <option value="pano">Pano Etkinlikleri</option>
+                    <option value="diger">Diğer Etkinlikler</option>
+                </select>
+                <input type="text" placeholder="Ne aramıştınız?" class="px-4 py-3 rounded-md text-black outline-none focus:ring-2 focus:ring-yellow-600 w-full sm:w-96 shadow-sm">
+            </div>
+
+            <div class="flex items-center justify-center md:justify-end gap-6">
+                <a href="Sepet.html" class="text-white hover:text-yellow-200 font-bold text-lg transition-colors">🛒 Sepet</a>
+                <a href="kullanici.html" class="bg-[#fff0cc] text-black px-6 py-2.5 rounded-md hover:bg-white transition-colors font-bold shadow-sm">Giriş Yap</a>
+                <a href="uyeol.html" class="hover:scale-105 transition-transform">
+                   <img src="Resimler/2.png" alt="Etkinlik İndir Logo" class="h-12 w-12 object-contain bg-white rounded-full p-1 drop-shadow-lg" onerror="this.src='https://via.placeholder.com/150?text=Logo'">
+                </a>
+            </div>
+        </div>
+
+        <nav class="bg-[#fff0cc] border-t border-yellow-300">
+            <div class="container mx-auto flex justify-center gap-8 py-3 font-semibold text-gray-800">
+                <a href="index.html" class="hover:text-[#ceb062] transition-colors">Ana Sayfa</a>
+                <a href="Sepet.html" class="hover:text-[#ceb062] transition-colors">Sepetim</a>
+                <a href="kullanici.html" class="hover:text-[#ceb062] transition-colors">Kullanıcı Girişi</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow container mx-auto py-12 px-4 flex justify-center items-center">
+        
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row max-w-4xl w-full">
+            
+            <div class="w-full md:w-1/2 p-8 md:p-10 flex flex-col justify-center">
+                <h2 class="text-3xl font-extrabold text-[#ceb062] mb-6">Yeni Üye Kaydı</h2>
+                
+                <form name="kullanici" action="kullanici.html" method="get">
+                    
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2">E-posta Adresi</label>
+                        <input type="text" id="isim" name="posta" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#ceb062] focus:ring-1 focus:ring-[#ceb062] bg-gray-50" placeholder="ornek@mail.com">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-700 text-sm font-bold mb-2">Şifre</label>
+                        <input type="password" id="sifre" name="sifre" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#ceb062] focus:ring-1 focus:ring-[#ceb062] bg-gray-50" placeholder="••••••••">
+                    </div>
+                    
+                    <div class="mb-4 flex items-start">
+                        <input type="checkbox" id="kampanya" name="secim" class="mt-1 w-4 h-4 text-[#ceb062] bg-gray-100 border-gray-300 rounded focus:ring-[#ceb062]">
+                        <label for="kampanya" class="ml-2 text-sm text-gray-600 cursor-pointer">
+                            Kampanyalardan haberdar olabilmem için kişisel verilerimin işlenmesini ve tarafıma elektronik ileti gönderilmesini kabul ediyorum.
+                        </label>
+                    </div>
+
+                    <div class="mb-6 flex items-start">
+                        <input type="checkbox" id="aydinlatma" name="secim" class="mt-1 w-4 h-4 text-[#ceb062] bg-gray-100 border-gray-300 rounded focus:ring-[#ceb062]">
+                        <label for="aydinlatma" class="ml-2 text-sm text-gray-600 cursor-pointer">
+                            Kişisel verilerimin işlenmesine yönelik <a href="#" class="text-[#ceb062] font-semibold hover:underline">aydınlatma metnini</a> okudum ve anladım.
+                        </label>
+                    </div>
+                    
+                    <button type="button" onclick="kayit()" class="w-full bg-[#ceb062] text-white font-bold text-lg py-3 rounded-lg hover:bg-yellow-600 transition-colors shadow-md">
+                        Üye Ol
+                    </button>
+                    
+                    <div class="mt-6 text-center">
+                        <p class="text-gray-600">Zaten üye misiniz? <a href="kullanici.html" class="text-[#ceb062] font-bold hover:underline">Giriş Yap</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="hidden md:block w-full md:w-1/2 bg-[#fff0cc] p-8 flex items-center justify-center relative">
+                <img src="Resimler/11.png" alt="Kayıt Görseli" class="w-full h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/400?text=Kayıt+Gorseli'">
+            </div>
+            
+        </div>
+    </main>
+
+    <footer class="bg-white py-6 mt-auto border-t text-center shadow-inner relative z-10">
+        <p class="text-gray-500 font-medium">© 2026 Etkinlikindir.com - Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script type="text/javascript" src="kullanici.js"></script>
+
+</body>
+</html>
